@@ -1,0 +1,519 @@
+header
+  width: 100%
+  height: 711px
+  min-height: 511px
+  margin: 0
+  overflow: hidden
+
+  p
+    -webkit-margin-before: 10px
+    -webkit-margin-after: 0
+
+.header-top-bar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  background-color: #222
+
+  h2
+    padding-left: 150px
+
+    a
+      display: flex
+
+  .logo-top-axit
+    align-self: center
+    width: 79px
+    height: 27px
+
+.header-nav-ul
+  height: 70px
+  margin: 0
+  padding-right: 150px
+  text-align: right
+  line-height: 70px
+  color: #fff
+  list-style: none
+  font-family: $opensans
+
+  li
+    position: relative
+    display: inline-block
+    padding: 1px 14px
+    overflow: hidden
+
+  a
+    color: #fff
+    text-decoration: none
+    transition: .2s color ease-out
+    padding: 10px
+    cursor: pointer
+    overflow: hidden
+
+    &::after
+      content: ''
+      position: absolute
+      top: -25px
+      left: 0
+      width: 0
+      height: 100%
+      border-bottom: 1px solid cadetblue
+      visibility: hidden
+      transition: .3s width ease-out
+
+    &:hover
+      color: cadetblue
+    &:hover::after
+      visibility: visible
+      width: 100%
+
+.hamburger
+  display: none
+  width: 40px
+  height: 34px
+  margin-right: 15px
+  transform: rotate(0deg)
+  transition: .5s ease-in-out
+  cursor: pointer
+
+  span 
+    display: block
+    position: absolute
+    height: 5px
+    width: 100%
+    background: #fff
+    border-radius: 4px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+
+  span:nth-child(1)
+    top: 0px
+
+  span:nth-child(2), span:nth-child(3)
+    top: 14px
+
+  span:nth-child(4)
+    top: 28px
+
+  &.open span:nth-child(1)
+    top: 14px
+    width: 0%
+    left: 50%
+
+  &.open span:nth-child(2)
+    transform: rotate(45deg)
+
+  &.open span:nth-child(3)
+    transform: rotate(-45deg)
+
+  &.open span:nth-child(4)
+    top: 14px
+    width: 0%
+    left: 50%
+
+.header-main-area
+  display: flex
+  justify-content: space-between
+  width: 100%
+  height: 635px
+  background: url(./../img/header-bg.jpg)
+
+.header-left-bar
+  width: 50%
+  max-width: 600px
+  padding-top: 110px
+  padding-left: 150px
+
+  h2
+    margin: 0
+
+  h3
+    margin-bottom: 15px
+    color: #fff
+    font-size: 2.4em
+    font-family: "Raleway", sans-serif
+
+  .header-divider
+    display: inline-block
+    width: 64px
+    height: 2px
+    background: #fff
+
+  p
+    padding-top: 10px
+    color: #fff
+    font-size: 1.3em
+    font-family: $raleway
+    font-weight: 300
+
+  .download
+    position: relative
+    width: 225px
+    height: 44px
+    margin-top: 45px
+    border: 2px solid #fff
+    background-color: transparent
+    color: #fff
+    font-family: $opensans
+    font-weight: 500
+    font-size: 1.2em
+    z-index: 0
+
+    &:hover
+      border: 2px solid #a53d49
+      color: #a53d49
+      transition: all .2s ease-in
+
+.header-right-bar
+  margin-top: 140px
+  padding-right: 150px
+
+.header-form
+  display: flex
+  flex-direction: column
+  align-content: stretch
+  width: 560px
+  height: 362px
+  border-radius: 10px
+  overflow: hidden
+
+  .form-title
+    position: relative
+    height: 54px
+    background: #f5f5f5
+    color: #222
+    font-family: "Open Sans", sans-serif
+    font-weight: 700
+    font-size: 1.4em
+    text-align: center
+
+    h3
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+      margin: 0
+      white-space: nowrap
+
+      span
+        text-transform: uppercase
+        color: #a53d49
+
+.form-main
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  flex-grow: 4
+  padding: 0 32px
+  background: white
+  overflow: hidden
+
+  .form-group
+    width: 100%
+
+    .header-form-input
+      width: 100%
+      height: 32px
+      line-height: 32px
+      border: 0
+      border-bottom: 1px solid #d6d6d6
+
+    .header-errors
+      margin-top: 8px
+      font-size: .75em
+      color: red
+
+.form-started
+  height: 54px
+  border: 0
+  text-align: center
+  background: $orange
+  font-family: "Open Sans", sans-serif
+  font-weight: 700
+  font-size: 1.2em
+  color: #fff
+  transition: .2s background ease-in-out, .2s color ease-in-out
+
+  &:hover
+    background: cadetblue
+    color: $orange
+
+
+//  --------------------------------------------
+
+@media (min-width: 1281px) and (max-width: 1600px)
+
+  .header-top-bar
+
+    h2
+      padding-left: 50px
+
+  .header-nav-ul
+    padding-right: 50px
+
+  .header-left-bar
+    padding-left: 50px
+
+    h3
+      font-size: 2.2em
+
+  .header-right-bar
+    padding-right: 50px
+
+//  --------------------------------------------
+
+@media (min-width: 1101px) and (max-width: 1280px)
+
+  .header-top-bar
+
+    h2
+      padding-left: 50px
+
+  .header-nav-ul
+    padding-right: 50px
+
+  .header-left-bar
+    padding-left: 50px
+
+    p
+      font-size: 1.15em
+
+    h3
+      font-size: 2.2em
+
+  .header-right-bar
+    padding-right: 50px
+    padding-left: 40px
+
+  .header-form
+    width: 460px
+
+//  --------------------------------------------
+
+@media (min-width: 961px) and (max-width: 1100px)
+
+  .header-top-bar
+
+    h2
+      padding-left: 30px
+
+  .header-nav-ul
+    padding-right: 30px
+
+    li
+      padding: 1px 14px
+
+  .header-left-bar
+    padding-left: 30px
+
+    h3
+      font-size: 1.8em
+
+    p
+      font-size: 1.1em
+
+  .header-right-bar
+    padding-right: 30px
+
+  .header-form
+    width: 360px
+
+    .form-title
+      font-size: 1.2em
+
+  .form-main
+    padding: 0 15px
+
+//  --------------------------------------------
+
+@media (min-width: 721px) and (max-width: 960px)
+
+  .header-top-bar
+
+    h2
+      padding-left: 30px
+
+  .header-nav-ul
+    padding-right: 30px
+
+    li
+      padding: 1px 10px
+
+  .header-main-area
+    flex-direction: column
+    justify-content: space-between
+
+  .header-left-bar
+    width: 90%
+    max-width: none
+    margin: 0 auto
+    padding-top: 25px
+    padding-left: 0
+
+    h2
+      float: left
+      margin-right: 40px
+
+    h3
+      width: 100%
+      margin: -3px 0 0
+      font-size: 1.7em
+
+    p
+      font-size: 1.2em
+
+    .download
+      margin-top: 20px
+
+    &:after
+      content: ""
+      clear: both
+      display: block
+
+  .header-right-bar
+    width: 90%
+    margin: 0 auto
+    padding-right: 0
+
+  .header-form
+    width: 100%
+    height: 262px
+    margin-bottom: 25px
+
+    .form-title, .form-started
+      height: 44px
+
+//  --------------------------------------------
+
+@media (max-width: 720px)
+
+  header
+    height: 698px
+
+  .header-top-bar
+    position: relative
+
+    h2
+      position: absolute
+      padding-left: 30px
+      top: 50%
+      transform: translateY(-50%)
+      -webkit-margin-before: 0
+      -webkit-margin-after: 0
+      -webkit-margin-start: 0
+      -webkit-margin-end: 0
+
+  .header-nav-bar
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    width: 100%
+    height: 72px
+
+    .hamburger
+      display: block
+
+  .header-nav-ul
+    width: 100%
+    height: 279px
+    overflow: hidden
+    padding-right: 0
+    text-align: center
+    line-height: 53px
+    -webkit-padding-start: 0
+    -moz-padding-start: 0
+    background: inherit
+    z-index: 1
+
+    li
+      display: block
+      width: 100%
+      padding: 0
+      border-bottom: 1px dashed #a53d49
+      background: #222
+      cursor: pointer
+
+      &:hover
+        border-bottom: 1px solid #a53d49
+
+      a::after
+        display: none
+
+  .menu
+    display: none
+    position: absolute
+    top: 70px
+    z-index: 1
+
+  .header-main-area
+    flex-direction: column
+    justify-content: space-around
+
+  .header-left-bar
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 90%
+    max-width: none
+    margin: 0 auto
+    padding-top: 0
+    padding-left: 0
+
+    h2
+      display: none
+
+    h3
+      width: 100%
+      margin: -3px 0 0
+      font-size: 1.8em
+      text-align: center
+
+    p
+      display: none
+
+    .download
+      margin-top: 24px
+
+  .header-right-bar
+    width: 90%
+    margin: 0 auto
+    padding-right: 0
+    padding-bottom: 20px
+
+  .header-form
+    width: 100%
+    height: 262px
+
+    .form-title, .form-started
+      height: 44px
+
+      h3
+        font-size: .9em
+
+  .more
+    height: 971px
+    transition: all .7s ease-out
+
+//  --------------------------------------------
+
+@media (max-width: 444px)
+
+  .header-top-bar
+
+    h2
+      padding-left: 15px
+
+  .header-left-bar
+
+    .download
+      margin: 20px auto
+
+  .header-form
+
+    .form-title
+
+      h3
+        font-size: .8em

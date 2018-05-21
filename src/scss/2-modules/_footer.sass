@@ -1,0 +1,38 @@
+footer
+  position: relative
+  height: 93px
+  width: 100%
+  background: #222
+
+  .footer-icons
+    display: flex
+    justify-content: center
+
+    ul
+      -webkit-padding-start: 0
+
+      li
+        display: inline-block
+        padding: 0 30px
+
+  p
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    margin: 0
+    padding: 0
+    font-family: $opensans
+    color: $lightgrey
+
+//  --------------------------------------------
+
+@media (max-width: 521px)
+
+  footer
+
+    .footer-icons
+
+      ul
+
+        li
+          padding: 0 10px

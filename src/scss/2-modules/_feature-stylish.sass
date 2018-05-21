@@ -1,0 +1,69 @@
+.feature-stylish-flex
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 300px
+  background-image: url(./../img/stylish-bg.jpg)
+
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: .4
+    z-index: 2
+
+  h3
+    margin-top: 0
+    font-family: $raleway
+    font-size: 1.8em
+    text-transform: uppercase
+    font-weight: 500
+    text-align: center
+    color: #fff
+    z-index: 3
+
+  p
+    padding: 10px 15px 0
+    color: $lightgrey
+    font-family: $raleway
+    font-weight: 300
+    font-size: 1.2em
+    text-align: center
+    z-index: 3
+
+  .feature-divider
+    display: inline-block
+    width: 64px
+    height: 2px
+    background: #fff
+    z-index: 3
+
+  .download
+    position: relative
+    width: 225px
+    height: 44px
+    margin-top: 45px
+    border: 2px solid #fff
+    background-color: transparent
+    color: #fff
+    font-family: $opensans
+    font-weight: 500
+    font-size: 1.2em
+    z-index: 3
+
+    &:hover
+      border: 2px solid #a53d49
+      color: #a53d49
+      transition: all .2s ease-in
+
+//  --------------------------------------------
+
+@media (max-width: 440px)
+
+  .feature-stylish-flex
+    height: 370px

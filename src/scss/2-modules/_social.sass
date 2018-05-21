@@ -1,0 +1,124 @@
+.social-aside-wrap
+  display: flex
+  justify-content: space-around
+  align-content: center
+  width: 100%
+  height: 130px
+
+.social-text
+  flex: 2
+  padding-left: 150px
+  font-family: $opensans
+  font-weight: 700
+  font-size: 1.4em
+
+  .social-title
+    font-family: $raleway
+    font-weight: 600
+    font-size: 1em
+    color: $blackgrey
+
+  .social-lead
+    font-family: $raleway
+    font-weight: 400
+    font-size: .78em
+    color: $slategray
+
+.social-icon-wrap
+  flex: 4
+  align-self: center
+  padding-right: 150px
+
+  .social-icon-area
+    width: 100%
+
+    .social-icon-_ul
+      display: flex
+      justify-content: space-between
+      margin-left: 50px
+
+  .social-icon-_li
+    filter: blur(2px)
+    transition: .1s filter ease-in
+
+    &:hover
+      filter: blur(0)
+
+//  --------------------------------------------
+
+@media (min-width: 1281px) and (max-width: 1600px)
+
+  .social-text
+    padding-left: 50px
+
+  .social-icon-wrap
+    padding-right: 50px
+
+//  --------------------------------------------
+
+@media (min-width: 1101px) and (max-width: 1280px)
+
+  .social-aside-wrap
+    height: 80px
+
+  .social-text
+    padding-left: 50px
+    align-self: center
+
+    .social-lead
+      display: none
+
+  .social-icon-wrap
+    padding-right: 50px
+
+//  --------------------------------------------
+
+@media (min-width: 961px) and (max-width: 1100px)
+
+  .social-text
+    padding-left: 30px
+
+  .social-icon-wrap
+    padding-right: 30px
+
+//  --------------------------------------------
+
+@media (min-width: 721px) and (max-width: 960px)
+
+  .social-aside-wrap
+    width: 90%
+    height: 100px
+    margin: 0 auto
+
+  .social-text
+    display: none
+
+  .social-icon-wrap
+    padding-right: 0
+
+    .social-icon-_ul:first-child
+      margin-left: 0
+
+    .social-icon-_li
+      transform: scale(.7)
+
+//  --------------------------------------------
+
+@media (max-width: 720px)
+
+  .social-aside-wrap
+    width: 90%
+    height: 80px
+    margin: 0 auto
+
+  .social-text
+    display: none
+
+  .social-icon-wrap
+    padding-right: 0
+
+    .social-icon-_ul:first-child
+      margin-left: 0
+
+    .social-icon-_li
+      transform: scale(.7)

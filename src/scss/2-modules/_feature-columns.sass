@@ -1,0 +1,553 @@
+.features-wrap
+  width: 100%
+
+.scroll-top-btn
+  width: 100px
+  height: 40px
+  position: fixed
+  top: 90%
+  right: 25px
+  border: 2px solid $darkGrey
+  border-radius: 5px
+  background: cadetblue
+  font-family: Calibri, sans-serif
+  color: beige
+  opacity: .9
+  transition: visibility .2s linear, opacity .2s linear, .2s background linear
+
+  &:hover
+    background: #549496
+
+.scroll-top-btn.hidden
+  opacity: 0
+  visibility: hidden
+
+.feature-columns
+  display: flex
+  align-items: center
+  padding: 30px 150px
+
+  &:nth-child(odd)
+    background: $testimonial
+
+.feature-tab
+  display: flex
+  flex-direction: column
+  width: 180px
+  margin-right: 8%
+  text-align: center
+
+  .tab
+    height: 110px
+    line-height: 110px
+    border-top: 1px solid #f5f5f5
+    border-right: 1px solid #f5f5f5
+    background: #333
+    color: #fff
+    font-family: $opensans
+    font-weight: 600
+    font-size: .8rem
+    cursor: pointer
+    transition: .15s transform linear, .2s background linear
+
+    &:hover
+      background: #404040
+      transform: scale(.95)
+
+    @media (max-width: 1080px)
+      width: 40%
+
+
+.feature-columns-1
+  position: relative
+  display: flex
+
+.modal
+  position: absolute
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, .9)
+  z-index: 99
+  opacity: 1
+  transition: visibility .2s ease-in, opacity .2s ease-in
+
+.modal.hidden
+  visibility: hidden
+  opacity: 0
+
+.close-modal
+  display: flex
+  justify-content: flex-end
+
+  span
+    position: relative
+    top: 20px
+    right: 60px
+    z-index: 999
+    transition: .2s transform linear
+
+    &:hover
+      transform: scale(1.1)
+
+  i
+    position: absolute
+    top: 0
+    left: 0
+    width: 100px
+    height: 100%
+    font-size: 2rem
+    color: white
+    cursor: pointer
+
+.showed-for-tab1
+  position: absolute
+  height: 594px
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+.video-tab1
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+
+.feature-text
+  flex: 1
+
+  .feature-divider
+    display: inline-block
+    width: 64px
+    height: 2px
+    background: $orange
+
+  .h4-tabs
+    padding-bottom: 20px
+
+  h4
+    font-size: 1.5em
+    font-family: $opensans
+
+  p
+    font-family: $opensans
+    font-size: 1.2em
+    color: $slategray
+
+
+  .text-title-double
+    display: flex
+
+    .title-img
+      margin-right: 30px
+
+    p:first-child
+      margin-top: 0
+      margin-bottom: -10px
+      color: #000
+
+.feature-download
+  width: 120px
+  height: 40px
+  margin-top: 30px
+  border: 0
+  border-radius: 5px
+  box-shadow: 1px 1px 1px 1px #c7c7c7
+  background: $orange
+  color: #fff
+  font-family: $opensans
+  font-weight: 500
+  font-size: 1.18em
+  transition: .3s background linear
+
+  &:hover
+    background: #903640
+
+.feature-image
+  flex: 1
+
+  .figure-end
+    display: flex
+    justify-content: flex-end
+    margin: 0
+
+  .figure-start
+    margin: 0
+
+.feature-image-1
+  padding-right: 150px
+
+//  --------------------------------------------
+
+@media (min-width: 1281px) and (max-width: 1600px)
+
+  .feature-columns
+    padding: 30px 50px
+
+    .feature-tab
+      padding-left: 0
+
+    .feature-image-1
+      padding-right: 0
+
+//  --------------------------------------------
+
+@media (min-width: 1101px) and (max-width: 1280px)
+
+  .feature-columns
+    padding: 30px 50px
+
+    &:first-child
+      position: relative
+
+    .feature-tab
+      padding-left: 0
+
+    .feature-image-1
+      padding-right: 0
+
+//  --------------------------------------------
+
+@media (min-width: 1081px) and (max-width: 1100px)
+
+  .feature-columns
+    padding: 30px 50px
+
+    .feature-tab
+      padding-left: 0
+
+    .feature-image-1
+      padding-right: 0
+
+  .modal
+    margin-left: 0
+
+  p
+    font-size: 1.05em
+
+//  --------------------------------------------
+
+@media (min-width: 961px) and (max-width: 1080px)
+
+  .feature-columns
+    flex-direction: column-reverse
+    padding: 30px 50px
+    align-items: flex-start
+
+    .feature-tab
+      padding-left: 0
+
+    .feature-image-1
+      margin-top: -130px
+      padding-right: 0
+
+  .modal
+    left: 0
+
+  h4
+    margin: 0
+
+  p
+    font-size: 1.05em
+
+  .text-title-box
+    position: relative
+    width: 45%
+    bottom: -20px
+
+    .text-title-double
+
+      .title-img
+        margin-right: 20px
+
+      p:first-child
+        font-size: 1.2em
+
+      p:last-child
+        font-size: 1.03em
+
+  .feature-text-right
+    position: relative
+    width: 100%
+
+  .feature-text-left
+    order: 2
+
+  .feature-columns .feature-columns-1
+    align-items: stretch
+    box-sizing: border-box
+
+  .feature-tab
+    flex-direction: row
+    order: 1
+    width: 300px
+    position: relative
+    top: 80px
+
+    a
+      width: 100%
+      border-left: 1px solid #f5f5f5
+
+    .tab
+      height: 80px
+      line-height: 80px
+
+  .feature-image-1
+    align-self: flex-end
+
+
+  .feature-columns-2
+
+    .feature-image-2
+      margin-left: 50%
+      margin-top: -220px
+
+  .feature-columns-3
+    box-sizing: border-box
+
+//  --------------------------------------------
+
+@media (min-width: 721px) and (max-width: 960px)
+
+  .feature-columns
+    flex-direction: column-reverse
+    padding: 30px 25px
+
+  .modal
+    margin-left: 0
+
+  .showed-for-tab1
+    width: 100%
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+
+  .video-tab1
+    position: relative
+    top: 50%
+    transform: translate(-50%, -50%)
+    left: 50%
+    width: 100%
+
+  h4
+    margin: 0
+
+  p
+    font-size: 1.05em
+
+  .text-title-box
+    display: flex
+    margin-top: 35px
+
+    .text-title-double
+      width: 100%
+
+      .title-img
+        margin-right: 20px
+
+      p:first-child
+        font-size: 1.1em
+
+      p:last-child
+        font-size: .98em
+
+  .feature-text-left
+    order: 2
+
+  .feature-image
+    width: 50%
+
+    img
+      width: 100%
+      height: 100%
+
+  .feature-image
+    padding-right: 0
+
+  .feature-columns-1
+
+    .feature-tab
+      position: relative
+      flex-direction: row
+      width: 300px
+      height: 80px
+      padding-left: 0
+      top: -140px
+
+      a
+        width: 100%
+        border-left: 1px solid #f5f5f5
+        border-top: none
+
+      .tab
+        height: 80px
+        line-height: 80px
+
+    .feature-image
+      display: inline-flex
+      align-self: flex-end
+      width: 40%
+
+    .feature-tab
+      align-self: flex-start
+
+  .feature-columns-2
+
+    .feature-image-2
+      display: flex
+      align-items: center
+
+  .feature-columns-3
+
+    .feature-image-3
+      display: flex
+      align-items: center
+
+//  --------------------------------------------
+
+@media (min-width: 830px) and (max-width: 959px)
+
+  .feature-columns-2
+
+    .feature-image-2
+      display: flex
+      align-items: center
+      padding-bottom: 3%
+
+  .feature-columns-3
+
+    .feature-image-3
+      display: flex
+      align-items: center
+
+//  --------------------------------------------
+
+@media (max-width: 720px)
+
+  .feature-columns
+    flex-direction: column-reverse
+    padding: 30px 25px
+
+    p
+      font-size: 1.05em
+
+  h4
+    margin: 0
+
+
+  .showed-for-tab1
+    width: 100%
+    left: 0
+    transform: translateY(-50%)
+
+  .video-tab1
+    width: 100%
+
+  .text-title-box
+    display: none
+
+    .text-title-double
+      width: 100%
+
+      .title-img
+        margin-right: 20px
+
+      p:first-child
+        font-size: 1.1em
+
+      p:last-child
+        font-size: .98em
+
+  .feature-text-left
+    order: 2
+
+  .feature-image
+    width: 100%
+    justify-content: center
+
+    img
+      width: 100%
+      height: 100%
+
+  .feature-columns-1
+
+    .feature-image
+      display: none
+
+    .feature-tab
+      position: relative
+      flex-direction: row
+      width: 100%
+      height: 80px
+      margin-right: 0
+      padding-left: 0
+      margin-top: 50px
+
+      a
+        width: 100%
+        border-left: 1px solid #f5f5f5
+        border-top: none
+
+      .tab
+        height: 80px
+        line-height: 80px
+
+    .feature-tab
+      align-self: flex-start
+
+  .feature-columns-2
+
+    .feature-image-2
+      display: flex
+      align-items: center
+
+  .feature-columns-3
+    height: auto
+
+    .feature-image-3
+      display: flex
+      align-items: center
+
+//  --------------------------------------------
+
+@media (max-width: 640px)
+
+  .feature-columns-1
+
+    .feature-tab
+      align-self: center
+      margin-top: 50px
+
+  .feature-columns-2
+
+    .feature-image-2
+      display: flex
+      align-items: center
+
+  .feature-columns-3
+
+    .feature-image-3
+      display: flex
+      align-items: center
+
+//  --------------------------------------------
+
+@media (max-width: 490px)
+
+  .p-first
+    margin-top: 0
+
+  .p-second
+    display: none
+
+  .text-title-box
+    flex-direction: column
+
+    .text-title-double
+
+      &:last-child
+        display: none
+
+  .feature-columns-1, .feature-columns-2, .feature-columns-3
+    height: auto
+
+  .feature-image-2, .feature-image-3
+    width: 100%

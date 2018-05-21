@@ -1,0 +1,203 @@
+.feature-form
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding: 30px 0
+
+.form-top-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  h3
+    margin-top: 0
+    font-family: $raleway
+    font-size: 1.8em
+    font-weight: 500
+    text-transform: uppercase
+
+  p
+    padding: 10px 15px 0
+    color: $darkslate
+    font-family: $raleway
+    font-weight: 300
+    font-size: 1.2em
+    text-align: center
+
+  .feature-divider
+    display: inline-block
+    width: 64px
+    height: 2px
+    background: $orange
+
+.form-contact-wrapper
+  display: flex
+  flex-direction: column
+
+.main-contact-form
+  width: 1125px
+
+.contact-form-area
+  padding: 0
+  border: 0
+
+  .fieldset-div
+    display: flex
+    justify-content: space-between
+
+    .contact-inputs-left, .contact-inputs-right
+      width: 45%
+
+    input[type=text], input[type=email]
+      width: 100%
+      padding: 25px 15px
+      border: 0
+      border-bottom: 1px solid $lightgrey
+      font-family: $opensans
+
+      &:focus
+        color: cadetblue
+
+    textarea
+      width: 100%
+      height: 168px
+      padding: 23px 15px 15px 30px
+      border: 0
+      border-bottom: 1px solid $lightgrey
+      font-family: $opensans
+      color: #777
+
+      &:focus
+        color: cadetblue
+
+.bottom-button-wrapper
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  margin-top: 30px
+
+  .send-button
+    width: 146px
+    height: 44px
+    border: 0
+    border-radius: 5px
+    box-shadow: 1px 1px 1px 1px #c7c7c7
+    background: $orange
+    color: #fff
+    font-size: 1.18em
+    font-family: $opensans
+    transition: .3s background linear
+
+    &:hover
+      background: #903640
+
+//  --------------------------------------------
+
+@media (min-width: 661px) and (max-width: 1280px)
+
+  .feature-form
+    flex-direction: row
+
+    h3
+      margin-top: 0
+
+  .main-contact-form
+    width: 670px
+
+  .contact-form-area
+
+    .fieldset-div
+      flex-direction: column
+
+      .contact-inputs-left, .contact-inputs-right
+        align-self: center
+        width: 440px
+
+      textarea
+        padding-left: 15px
+        height: 108px
+
+  .bottom-button-wrapper
+    margin-left: 30px
+
+//  --------------------------------------------
+
+@media (min-width: 721px) and (max-width: 960px)
+
+  .feature-form
+    flex-direction: column
+
+    h3
+      margin-top: 0
+
+  .form-contact-wrapper
+    width: 100%
+
+  .main-contact-form
+    width: 100%
+
+    .fieldset-div
+      flex-direction: column
+
+      .contact-inputs-left, .contact-inputs-right
+        align-self: center
+        width: 100%
+
+      input[type=text], input[type=email]
+        width: 95%
+        padding-left: 35px
+        padding-right: 15px
+
+      textarea
+        width: 95%
+        padding-left: 35px
+        padding-right: 15px
+
+    .send-button
+      width: 90%
+
+//  --------------------------------------------
+
+@media (max-width: 720px)
+
+  .feature-form
+    flex-direction: column
+    padding: 30px 0
+
+  .form-top-flex
+
+    h3
+      margin-top: 0
+
+  .form-contact-wrapper
+    width: 100%
+
+  .main-contact-form
+    width: 100%
+
+  .contact-form-area
+
+    .fieldset-div
+      flex-direction: column
+
+      .contact-inputs-left, .contact-inputs-right
+        align-self: center
+        width: 100%
+
+      input[type=text], input[type=email]
+        width: 92.3%
+        padding-left: 35px
+        padding-right: 15px
+
+      textarea
+        width: 95%
+        padding-left: 35px
+        padding-right: 15px
+
+  .bottom-button-wrapper
+    align-items: flex-end
+    margin-left: 0
+
+    .send-button
+      width: 90%
